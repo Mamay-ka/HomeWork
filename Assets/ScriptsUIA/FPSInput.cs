@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace UIA
@@ -10,9 +8,20 @@ namespace UIA
     public class FPSInput : MonoBehaviour
     {
         public float speed = 6f;
-        public float gravity = -9.8f; 
+        public float gravity = -9.8f;
 
+        private const float baseSpeed = 6.0f;
         private CharacterController _charController;
+
+        private void Awake()
+        {
+            Messenger<float>.AddListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+        }
+
+        private void OnDestroy()
+        {
+            Messenger<float>.RemoveListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+        }
 
         private void Start()
         {
@@ -30,6 +39,11 @@ namespace UIA
             movement *= Time.deltaTime;
             movement = transform.TransformDirection(movement);//преобразуем вектор движения от локальных к глобальным координатам
             _charController.Move(movement);//заставим этот вектор перемещать компонент ЧарКoнтроллер
+        }
+
+        private void OnSpeedChanged(float value)
+        {
+            speed = baseSpeed * value;
         }
         
     }

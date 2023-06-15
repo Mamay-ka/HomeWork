@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class RayShooter : MonoBehaviour
     void Start()
     {
         _camera = GetComponent<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;//скрываем указатель мыши в центре экрана
-       Cursor.visible = false;//делаем его невидимым
+        //Cursor.lockState = CursorLockMode.Locked;//скрываем указатель мыши в центре экрана
+        //Cursor.visible = false;//делаем его невидимым
     }
 
     private void OnGUI()
@@ -24,7 +25,7 @@ public class RayShooter : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())//Проверяем, что GUI не используется.
         {
             Vector3 point = new Vector3(_camera.pixelWidth/2, _camera.pixelHeight/2, 0);//середина экрана 
             Ray ray = _camera.ScreenPointToRay(point);//луч выпущенный из середины экрана
@@ -37,6 +38,7 @@ public class RayShooter : MonoBehaviour
                 {
                     Debug.Log("Target hit");
                     target.ReactToHit();
+                    Messenger.Broadcast(GameEvent.ENEMY_HIT);//К реакции на попадания добавлена рассылка сообщения.
                 }
                 else
                 {
