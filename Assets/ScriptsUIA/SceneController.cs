@@ -29,6 +29,7 @@ public class SceneController : MonoBehaviour
             _enemy.transform.position = new Vector3(0, 1, 0);
             float angle = Random.Range(0, 360);
             _enemy.transform.Rotate(0, angle, 0);
+         
         }
         
     }
@@ -37,5 +38,6 @@ public class SceneController : MonoBehaviour
     {
         x++;
         Debug.Log("SceneController" + x);
+               
     }
 }

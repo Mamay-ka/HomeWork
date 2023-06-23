@@ -1,11 +1,10 @@
-using System.Collections;
 using UnityEngine;
 
 public class WanderingAI : MonoBehaviour
 {
     [SerializeField] private GameObject fireballPrefab;
     private GameObject _fireball;
-        
+
     public float speed = 3.0f;
 
     public float obstacleRange = 5.0f;//рассто€ние, с которого начинаетс€ реакци€ на преп€тствие
@@ -66,6 +65,6 @@ public class WanderingAI : MonoBehaviour
     private void OnSpeedChanged(float value)//ћетод, объ€вленный в подписчике дл€ событи€ SPEED_CHANGED
     {
         speed = baseSpeed * value;
-        
+    
     }
 }

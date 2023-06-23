@@ -24,7 +24,7 @@ public class UIControllerUIA : MonoBehaviour
     private void Start()
     {
         _score = 0;
-        scoreLabel.text =_score.ToString();
+        scoreLabel.text = _score.ToString();
         settingsPopup.Close();
     }
     /*void Update()
@@ -45,7 +45,7 @@ public class UIControllerUIA : MonoBehaviour
 
     private void OnEnemyHit()
     {
-        _score++;
+        _score += 1;
         scoreLabel.text = _score.ToString();
     }
 }

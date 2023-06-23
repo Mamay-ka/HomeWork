@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SettingsPopup : MonoBehaviour
 {
     [SerializeField] private Slider speedSlider;
+
+    
 
     private void Start()
     {
@@ -30,7 +30,6 @@ public class SettingsPopup : MonoBehaviour
     {
         Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, speed);//Значение, заданное положением ползунка, рассылается как событие <float>.
         Debug.Log("Speed :" + speed);
-       
     }
 }
 
