@@ -1,5 +1,6 @@
 using PlayFab;
 using PlayFab.ClientModels;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class PlayFabAccountManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text _titleLabel;
     [SerializeField] private TMP_Text _dataCharacter;
+    [SerializeField] private TMP_Text _catalogLabel;
 
     private readonly Dictionary<string, CatalogItem> _catalog = new Dictionary<string,
         CatalogItem>();
@@ -35,13 +37,16 @@ public class PlayFabAccountManager : MonoBehaviour
     {
         HandleCatalog(result.Catalog);
         Debug.Log($"Catalog was loaded successfully!");
+                        
     }
     private void HandleCatalog(List<CatalogItem> catalog)
     {
         foreach (var item in catalog)
         {
             _catalog.Add(item.ItemId, item);
-            Debug.Log($"Catalog item {item.ItemId} was added successfully!");
+            Debug.Log($"Catalog item {item.ItemId} {item.ItemClass} was added successfully!");
+            _catalogLabel.text = $"{item.ItemId} {item.ItemClass}";
+                                  
         }
     }
 }
