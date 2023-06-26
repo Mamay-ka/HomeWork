@@ -1,0 +1,255 @@
+{
+  "CatalogVersion": "1.0",
+  "Catalog": [
+    {
+      "ItemId": "001",
+      "ItemClass": "swords",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Iron sword",
+      "Description": "The first thing for young warrior ",
+      "VirtualCurrencyPrices": {
+        "RM": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "handle",
+        "weapon",
+        "sword"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "002",
+      "ItemClass": "shields",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Wooden shield",
+      "Description": "The second thing for real warrior",
+      "VirtualCurrencyPrices": {
+        "RM": 50
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "handle",
+        "weapon",
+        "shield"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "004",
+      "ItemClass": "poisons",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Poison",
+      "Description": "For my enemy",
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "poison",
+        "weak",
+        "debuf"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "003",
+      "ItemClass": "potions",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Health potion",
+      "Description": "The third thing for smart warrior",
+      "VirtualCurrencyPrices": {
+        "RM": 25
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "health",
+        "potion"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": 5,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "01",
+      "ItemClass": null,
+      "CatalogVersion": "1.0",
+      "DisplayName": "Health bundle",
+      "Description": "A lot of health a few of death",
+      "VirtualCurrencyPrices": {
+        "RM": 250
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "003",
+          "004",
+          "004"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": null
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "02",
+      "ItemClass": null,
+      "CatalogVersion": "1.0",
+      "DisplayName": "Start bundle",
+      "Description": "For scoolers",
+      "VirtualCurrencyPrices": {
+        "RM": 120
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "001",
+          "002"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": null
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "1",
+      "ItemClass": null,
+      "CatalogVersion": "1.0",
+      "DisplayName": "Daily award",
+      "Description": null,
+      "VirtualCurrencyPrices": {
+        "RM": 10
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": {
+        "KeyItemId": null,
+        "ItemContents": [
+          "01"
+        ],
+        "ResultTableContents": [],
+        "VirtualCurrencyContents": null
+      },
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": [
+    {
+      "TableId": "1.0",
+      "Nodes": [
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "004",
+          "Weight": 10
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "002",
+          "Weight": 3
+        }
+      ]
+    }
+  ]
+}
