@@ -45,7 +45,7 @@ public class PlayFabAccountManager : MonoBehaviour
         {
             _catalog.Add(item.ItemId, item);
             Debug.Log($"Catalog item {item.ItemId} {item.ItemClass} was added successfully!");
-            _catalogLabel.text = $"{item.ItemId} {item.ItemClass}";
+            _catalogLabel.text = $" You`ve got a {item.DisplayName}";
                                   
         }
     }

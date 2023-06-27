@@ -23,6 +23,7 @@ public class RelativeMovement : MonoBehaviour
             Quaternion tmp = target.rotation;//—охран€ем начальную ориентацию, чтобы вернутьс€ к ней после завершени€ работы с целевым объектом
             target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
             movement = target.TransformDirection(movement);//ѕреобразуем направление движени€ из локальных в глобальные координаты
+            target.rotation = tmp;
 
             //transform.rotation = Quaternion.LookRotation(movement);//ћетод LookRotation() вычисл€ет кватернион, смотр€щий в этом направлении
             Quaternion direction = Quaternion.LookRotation(movement);
